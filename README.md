@@ -42,6 +42,7 @@ Next there’s an info box that explains the rules of the quiz.
 
 Next, there’s the quiz box. In this box it has the timer, timer line (for the visuals), a place for the question, a place for the answer list, and there’s a footer for this box that holds the total number of questions and a button for going to the next question.
 
+```html
 <div class="quiz_box">
         <header>
             <div class="title">Demo Quiz App in JavaScript</div>
@@ -67,10 +68,12 @@ Next, there’s the quiz box. In this box it has the timer, timer line (for the 
             </div>
             <button class="next_btn">Next Que</button>
         </footer>
-    </div>
+</div>
+```
 
 Lastly, there’s a result box that shows a crown icon and announces that you’re finished, and tells you your score. There’s 2 more buttons that allow you to restart or quit the quiz.
 
+```html
 <div class="result_box">
         <div class="icon">
             <i class="fas fa-crown"></i>
@@ -83,11 +86,13 @@ Lastly, there’s a result box that shows a crown icon and announces that you’
             <button class="restart">Replay Quiz</button>
             <button class="quit">Quit Quiz</button>
         </div>
-    </div>
+</div>
+```
 
 ## The CSS
 They stylesheet first imports a google font and sets everything to default.
 
+```css
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
@@ -95,9 +100,11 @@ They stylesheet first imports a google font and sets everything to default.
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+```
 
 The css stylesheet declares default colors and positionings for the elements. An example of this is the result button:
 
+```css
 .result_box {
   background: #fff;
   border-radius: 5px;
@@ -112,9 +119,11 @@ The css stylesheet declares default colors and positionings for the elements. An
   pointer-events: none;
   transition: all 0.3s ease;
 }
+```
 
 And for default positionings some of the defaults are listed as this:
 
+```css
 .start_btn,
 .info_box,
 .quiz_box,
@@ -125,11 +134,13 @@ And for default positionings some of the defaults are listed as this:
   transform: translate(-50%, -50%);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+```
 
 ## The JS
 ### questions.js
 This script consists of a single array named “questions”. The array contains 5 objects, and they all contain a numb, question, answer, and options elements. The options element is another array of strings in each array. And example of the first object in the array is this:
 
+```javascript
 let questions = [
   {
     numb: 1,
@@ -142,10 +153,12 @@ let questions = [
       "Hyper Tool Multi Language",
     ],
   },
+```
 
 ### quizApp.js
 The quizzApp.js contains all the main logic for the quiz. It starts off declaring all of the elements created in the html like buttons and the timer and the boxes themselves. Then it adds event listeners to the buttons and calls their respective functions and behaviors. An example of this is the continue and quit buttons:
 
+```javascript
 // if exitQuiz button clicked
 exit_btn.addEventListener("click", (e) => {
   info_box.classList.remove("activeInfo"); //hide info box
@@ -160,11 +173,13 @@ continue_btn.addEventListener("click", (e) => {
   startTimer(15); //calling startTimer function
   startTimerLine(0); //calling startTimerLine function
 });
+```
 
 After this, it declares the main functions. showQuestions , which creates arrays for each option used in the options js script.
 
 Next there’s the optionSelected function. When called it clears the current time counter and the timer line. It appends to the user score if they got it right and does nothing if they wrong besides indicate it with declaring it’s wrong.
 
+```javascript
 //if user selected option is equal to array's correct answer
   if (userAns == correcAns) {
     userScore += 1; //update total score value increment by 1
@@ -186,8 +201,11 @@ Next there’s the optionSelected function. When called it clears the current ti
       }
     }
   }
+```
 
 The timer functions simply create a timer with an intercal of 1000. startTimer() has another function inside of it named timer(), and it decrements the time value over time. When the time is less than 0 then it will act out an “answer wrong” behavior.
+
+```javascript
 function startTimer(time) {
   counter = setInterval(timer, 1000);
   function timer() {
@@ -204,3 +222,4 @@ function startTimer(time) {
       timeText.textContent = "Time Off"; //change the time text to time off
       const allOptions = option_list.children.length; //get all option items
       let correcAns = questions[que_count].answer; //get correct answer from array
+```
