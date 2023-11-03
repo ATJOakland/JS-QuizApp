@@ -1,7 +1,8 @@
-#Quiz App Demo
+# Quiz App Demo
+
 This is a simple web app that is a quiz. The purpose of the quiz is to teach basic terminology of web based programming for HTML, CSS, PHP, SQL, and XML.
 
-Basic Features
+## Basic Features
 A number and visual bar timer that counts down.
 Automatically selects the correct answer when the timer runs out.
 5 Premade questions about Web Development Terminology.
@@ -12,10 +13,10 @@ It shows the current questions and how many questions in total at the bottom lef
 At the end it says the quiz is complete and gives the user their score out of 5.
 Allows them to replay the quiz or just quit the quiz at the end.
 
-The Directory
+## The Directory
 In the DemoQuizApp there are 4 initial files. 2 folders, the index.html, and a .gitignore. The two folders are named css and js. In the css folder there’s a single style.css. In the js folder there are two javascript files named questions.js and quizApp.js. All of these files are referenced in the index.html file.
 
-The HTML
+## The HTML
 There is only 1 html file, index.html. In the head it implements the css file in “css/style.css” and an outside font at “https://kit.fontawesome.com/4a4f4b55b0.js”. It also implements the javascript files “js/questions.js” and “js/quizApp.js”, the first being the questions for the quiz and the later being the quiz logic.
 
 The body of the html starts with a simple button to start the quiz.
@@ -82,7 +83,7 @@ Lastly, there’s a result box that shows a crown icon and announces that you’
         </div>
     </div>
 
-The CSS
+## The CSS
 They stylesheet first imports a google font and sets everything to default.
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
@@ -123,8 +124,8 @@ And for default positionings some of the defaults are listed as this:
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-The JS
-questions.js
+## The JS
+### questions.js
 This script consists of a single array named “questions”. The array contains 5 objects, and they all contain a numb, question, answer, and options elements. The options element is another array of strings in each array. And example of the first object in the array is this:
 
 let questions = [
@@ -140,7 +141,7 @@ let questions = [
     ],
   },
 
-quizApp.js
+### quizApp.js
 The quizzApp.js contains all the main logic for the quiz. It starts off declaring all of the elements created in the html like buttons and the timer and the boxes themselves. Then it adds event listeners to the buttons and calls their respective functions and behaviors. An example of this is the continue and quit buttons:
 
 // if exitQuiz button clicked
