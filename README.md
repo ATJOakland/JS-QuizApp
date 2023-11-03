@@ -23,6 +23,7 @@ The body of the html starts with a simple button to start the quiz.
 `<div class="start_btn"><button>Start Quiz</button></div>`
 
 Next there’s an info box that explains the rules of the quiz.
+```html
 <div class="info_box">
         <div class="info-title"><span>Some Rules of this Quiz</span></div>
         <div class="info-list">
@@ -36,7 +37,8 @@ Next there’s an info box that explains the rules of the quiz.
             <button class="quit">Exit Quiz</button>
             <button class="restart">Continue</button>
         </div>
-    </div>
+</div>
+```
 
 Next, there’s the quiz box. In this box it has the timer, timer line (for the visuals), a place for the question, a place for the answer list, and there’s a footer for this box that holds the total number of questions and a button for going to the next question.
 
