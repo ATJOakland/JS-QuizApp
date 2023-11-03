@@ -20,7 +20,7 @@ In the DemoQuizApp there are 4 initial files. 2 folders, the index.html, and a .
 There is only 1 html file, index.html. In the head it implements the css file in “css/style.css” and an outside font at “https://kit.fontawesome.com/4a4f4b55b0.js”. It also implements the javascript files “js/questions.js” and “js/quizApp.js”, the first being the questions for the quiz and the later being the quiz logic.
 
 The body of the html starts with a simple button to start the quiz.
-<div class="start_btn"><button>Start Quiz</button></div>
+`<div class="start_btn"><button>Start Quiz</button></div>`
 
 Next there’s an info box that explains the rules of the quiz.
 <div class="info_box">
