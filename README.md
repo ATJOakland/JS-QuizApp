@@ -3,15 +3,15 @@
 This is a simple web app that is a quiz. The purpose of the quiz is to teach basic terminology of web based programming for HTML, CSS, PHP, SQL, and XML.
 
 ## Basic Features
-A number and visual bar timer that counts down.
-Automatically selects the correct answer when the timer runs out.
-5 Premade questions about Web Development Terminology.
-Answers change into a dark blue when the mouse hovers over it and the cursor changes as well.
-The correct answer changes to green when selected and a checkmark appears.
-If a wrong answer is chosen then it turns red and a red X is shown, and the correct answer is displayed by turning green with a check mark.
-It shows the current questions and how many questions in total at the bottom left.
-At the end it says the quiz is complete and gives the user their score out of 5.
-Allows them to replay the quiz or just quit the quiz at the end.
+* A number and visual bar timer that counts down.
+* Automatically selects the correct answer when the timer runs out.
+* 5 Premade questions about Web Development Terminology.
+* Answers change into a dark blue when the mouse hovers over it and the cursor changes as well.
+* The correct answer changes to green when selected and a checkmark appears.
+* If a wrong answer is chosen then it turns red and a red X is shown, and the correct answer is displayed by turning green with a check mark.
+* It shows the current questions and how many questions in total at the bottom left.
+* At the end it says the quiz is complete and gives the user their score out of 5.
+* Allows them to replay the quiz or just quit the quiz at the end.
 
 ## The Directory
 In the DemoQuizApp there are 4 initial files. 2 folders, the index.html, and a .gitignore. The two folders are named css and js. In the css folder there’s a single style.css. In the js folder there are two javascript files named questions.js and quizApp.js. All of these files are referenced in the index.html file.
